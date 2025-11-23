@@ -3,7 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Slideshow</title>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body></body>
+  <body>
+    <div id="my-slideshow" class="overflow-hidden relative">
+      <div id="track" class="flex">
+        <!-- Slide 1 -->
+        <div class="slide w-full flex-shrink-0">
+          <img src="https://picsum.photos/1600/600" alt="slide-image" />
+        </div>
+        <!-- Slide 2 -->
+        <div class="slide w-full flex-shrink-0">
+          <img src="https://picsum.photos/1600/600" alt="slide-image" />
+        </div>
+        <!-- Slide 3 -->
+        <div class="slide w-full flex-shrink-0">
+          <img src="https://picsum.photos/1600/600" alt="slide-image" />
+        </div>
+      </div>
+
+      <button
+        id="previous"
+        class="border w-[40px] h-[40px] text-white text-xl bg-stone-600 flex justify-center items-center select-none absolute top-[50%] left-0 -translate-y-1/2 z-10 hover:bg-black transition-all"
+      >
+        &lt;
+      </button>
+      <button
+        id="next"
+        class="border w-[40px] h-[40px] text-white text-xl bg-stone-600 flex justify-center items-center select-none absolute top-[50%] right-0 -translate-y-1/2 z-10 hover:bg-black transition-all"
+      >
+        &gt;
+      </button>
+
+      <div
+        id="navigation"
+        class="absolute flex gap-2 justify-center items-end mb-5 bottom-0 left-1/2 -translate-x-1/2"
+      >
+        <!-- <div class="dot w-5 h-5 bg-white rounded-full"></div> -->
+      </div>
+    </div>
+    <script src="./js/main.js"></script>
+  </body>
 </html>
